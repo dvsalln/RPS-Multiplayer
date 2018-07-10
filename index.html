@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rock Paper Scissors</title>
+  <!-- reset for browser optimization -->
+  <!-- bootstrap cdn -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!-- local styesheet -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- animated rock paper scissor -->
+  <div class="black-bar"></div>
+  <img src="assets/images/rock-left.png" height="200" class="rps-animated rps-left" id="rock-left">
+  <img src="assets/images/paper-left.png" height="200" class="rps-animated rps-left" id="paper-left">
+  <img src="assets/images/scissor-left.png" height="200" class="rps-animated rps-left" id="scissor-left">
+  <img src="assets/images/rock-right.png" height="200" class="rps-animated rps-right" id="rock-right">
+  <img src="assets/images/paper-right.png" height="200" class="rps-animated rps-right" id="paper-right">
+  <img src="assets/images/scissor-right.png" height="200" class="rps-animated rps-right" id="scissor-right">
+  <div class="wrapper text-center">
+    <!-- Username form -->
+    <form class="form-inline" role="form">
+      <div class="form-group">
+        <label for="username" class="">Username:</label> 
+        <input class="form-control" type="text" id="username" placeholder="username..">
+        <input class="user-submit" type="submit" value="Submit">
+      </div>
+    </form> <!-- ./Username form -->
+    <!-- Player 1 panel -->
+    <div class="row top-buffer">
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading playerOne-name">
+          Player 1:
+            <span>Waiting For Player</span>
+          </div>
+          <div class="panel-body playerOne-panel"></div>
+          <div class="panel-footer">
+            <p>Wins: <span id="p1-wins">0</span> Losses: <span id="p1-losses">0</span></p>
+          </div>
+        </div>    
+      </div><!-- ./Player 1 panel -->
+      <!-- Status Well -->
+      <div class="col-md-4">
+        <div class="well info-well">
+          <p>Loading...</p>
+        </div>
+      </div><!-- ./Status Well -->
+      <!-- Player 2 Panel -->
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading playerTwo-name">
+          Player 2:
+            <span>Waiting For Player</span>
+          </div>
+          <div class="panel-body playerTwo-panel"></div>
+          <div class="panel-footer">
+            <p>Wins: <span id="p2-wins">0</span> Losses: <span id="p2-losses">0</span></p>
+          </div>
+        </div>    
+      </div><!-- ./Player 2 Panel -->
+    </div><!-- ./row -->
+    <!-- Chat area -->
+    <div class="row">
+      <div class="col-md-8 col-md-push-2">
+        <div id="chat-box"></div>
+        <form class="input-group">
+          <input id="chat-input" type="text" class="form-control" placeholder="Talk some smack..">
+          <span class="input-group-btn">
+             <input id="chat-submit" class="btn btn-default" type="submit" value="Submit">Submit</input>
+          </span>
+        </form><!-- /input-group -->
+      </div>  
+    </div><!-- ./Chat area -->
+    
+    <!-- footer -->
+    <div class="push"></div>  
+  </div><!-- /.wrapper -->
+  <div class="footer text-center">
+    <span class="copyright">
+      &copy Davis Allen
+    </span>
+  </div><!-- /.footer -->
+
+  <!-- jquery cdn -->
+  <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+  <!-- firebase cdn -->
+  <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+  <!-- local javascript file -->
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+</html>
